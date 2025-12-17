@@ -18,7 +18,7 @@
       <div class="brand">
         <img src="assets/tt-logo.png" alt="T&T Temecula Cleaning Services logo" />
         <div class="title">
-          <strong>T & T Temecula</strong>
+          <strong>T &amp; T Temecula</strong>
           <span>Explosive Clean</span>
         </div>
       </div>
@@ -33,192 +33,194 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-card shine-sweep">
-      <div class="stack">
-        <span class="kicker">Book a Cleaning</span>
-        <h1>Get a Fast Quote & Lock In Your Clean</h1>
-        <p class="lead">
-          Fill out the form below and we’ll confirm pricing and availability.
-          Most Temecula homes receive a same-day response.
-        </p>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-card shine-sweep">
+        <div class="stack">
+          <span class="kicker">Book a Cleaning</span>
+          <h1>Get a Fast Quote &amp; Lock In Your Clean</h1>
+          <p class="lead">
+            Fill out the form below and we’ll confirm pricing and availability.
+            Most Temecula homes receive a same-day response.
+          </p>
 
-        <div class="cta-row">
-          <a href="tel:+19515551234" class="btn btn-primary">Call Now</a>
-          <a href="mailto:info@tttemeculacleaning.com" class="btn btn-secondary">Email Us</a>
+          <div class="cta-row">
+            <a href="tel:+19515551234" class="btn btn-primary">Call Now</a>
+            <a href="mailto:info@tttemeculacleaning.com" class="btn btn-secondary">Email Us</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BOOKING FORM + SIDEBAR -->
-  <section class="section separator">
-    <div class="container page-grid">
+    <!-- BOOKING FORM + SIDEBAR -->
+    <section class="section separator">
+      <div class="container page-grid">
 
-      <!-- FORM -->
-      <div class="card">
-        <form class="form" action="mailto:info@tttemeculacleaning.com" method="post" enctype="text/plain">
+        <!-- FORM -->
+        <div class="card">
+          <form class="form" action="mailto:info@tttemeculacleaning.com" method="post" enctype="text/plain">
 
-          <div class="section-head">
-            <h2>Booking Request</h2>
-            <p>
-              Tell us a little about your home or business so we can give you an accurate quote.
+            <div class="section-head">
+              <h2>Booking Request</h2>
+              <p>
+                Tell us a little about your home or business so we can give you an accurate quote.
+              </p>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input id="name" name="Name" type="text" placeholder="John Smith" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="Phone" type="tel" placeholder="(951) 555-1234" required />
+              </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="Email" type="email" placeholder="you@email.com" required />
+              </div>
+
+              <div class="field">
+                <label for="service">Service Type</label>
+                <select id="service" name="Service Type" required>
+                  <option value="">Select a service</option>
+                  <option>Standard Cleaning</option>
+                  <option>Deep Cleaning</option>
+                  <option>Move-In / Move-Out</option>
+                  <option>Airbnb / Turnover</option>
+                  <option>Office / Commercial</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="address">Service Address</label>
+              <input id="address" name="Address" type="text" placeholder="Street, City, Zip" required />
+            </div>
+
+            <div class="grid grid-3">
+              <div class="field">
+                <label for="beds">Bedrooms</label>
+                <select id="beds" name="Bedrooms">
+                  <option value="">Beds</option>
+                  <option>Studio</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5+</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="baths">Bathrooms</label>
+                <select id="baths" name="Bathrooms">
+                  <option value="">Baths</option>
+                  <option>1</option>
+                  <option>1.5</option>
+                  <option>2</option>
+                  <option>2.5</option>
+                  <option>3+</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="pets">Pets</label>
+                <select id="pets" name="Pets">
+                  <option value="">Pets?</option>
+                  <option>No Pets</option>
+                  <option>Dog(s)</option>
+                  <option>Cat(s)</option>
+                  <option>Multiple Pets</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="field">
+                <label for="date">Preferred Date</label>
+                <input id="date" name="Preferred Date" type="date" required />
+              </div>
+
+              <div class="field">
+                <label for="time">Preferred Time</label>
+                <input id="time" name="Preferred Time" type="time" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="notes">Notes / Add-Ons</label>
+              <textarea id="notes" name="Notes" placeholder="Add-ons, special requests, gate codes, access notes, etc."></textarea>
+              <span class="help">
+                Common add-ons: inside oven, fridge, interior windows, pet cleanup, garage or patio sweep.
+              </span>
+            </div>
+
+            <div class="checkbox">
+              <input id="consent" type="checkbox" required />
+              <label for="consent">
+                I understand this is a booking request and final pricing will be confirmed before service.
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+              <span class="help">We typically respond within a few hours.</span>
+            </div>
+
+            <div class="notice">
+              <strong>Satisfaction Guaranteed.</strong>
+              If something isn’t right, let us know within 24 hours and we’ll make it right.
+            </div>
+
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar stack" id="fast-quote">
+
+          <div class="card soft">
+            <h3>Fast Quote Tips</h3>
+            <ul class="list">
+              <li>Accurate bed/bath count helps pricing</li>
+              <li>Let us know if it’s a first-time clean</li>
+              <li>Mention pets and heavy buildup</li>
+              <li>Add-ons can be bundled to save</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Typical Temecula Pricing</h3>
+            <div class="pills">
+              <span class="pill">2 Bed / 2 Bath <strong>$110–$140</strong></span>
+              <span class="pill">Deep Clean <strong>$160–$320</strong></span>
+              <span class="pill">Move-Out <strong>$199+</strong></span>
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3>Operating Hours</h3>
+            <p class="muted">
+              Monday – Saturday<br />
+              8:00am – 6:00pm
+            </p>
+            <div class="hr"></div>
+            <p class="small muted">
+              Same-day and next-day availability often available.
             </p>
           </div>
 
-          <div class="grid grid-2">
-            <div class="field">
-              <label for="name">Full Name</label>
-              <input id="name" name="Name" type="text" placeholder="John Smith" required />
-            </div>
+        </aside>
 
-            <div class="field">
-              <label for="phone">Phone Number</label>
-              <input id="phone" name="Phone" type="tel" placeholder="(951) 555-1234" required />
-            </div>
-          </div>
-
-          <div class="grid grid-2">
-            <div class="field">
-              <label for="email">Email Address</label>
-              <input id="email" name="Email" type="email" placeholder="you@email.com" required />
-            </div>
-
-            <div class="field">
-              <label for="service">Service Type</label>
-              <select id="service" name="Service Type" required>
-                <option value="">Select a service</option>
-                <option>Standard Cleaning</option>
-                <option>Deep Cleaning</option>
-                <option>Move-In / Move-Out</option>
-                <option>Airbnb / Turnover</option>
-                <option>Office / Commercial</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="address">Service Address</label>
-            <input id="address" name="Address" type="text" placeholder="Street, City, Zip" required />
-          </div>
-
-          <div class="grid grid-3">
-            <div class="field">
-              <label for="beds">Bedrooms</label>
-              <select id="beds" name="Bedrooms">
-                <option value="">Beds</option>
-                <option>Studio</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5+</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="baths">Bathrooms</label>
-              <select id="baths" name="Bathrooms">
-                <option value="">Baths</option>
-                <option>1</option>
-                <option>1.5</option>
-                <option>2</option>
-                <option>2.5</option>
-                <option>3+</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="pets">Pets</label>
-              <select id="pets" name="Pets">
-                <option value="">Pets?</option>
-                <option>No Pets</option>
-                <option>Dog(s)</option>
-                <option>Cat(s)</option>
-                <option>Multiple Pets</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="grid grid-2">
-            <div class="field">
-              <label for="date">Preferred Date</label>
-              <input id="date" name="Preferred Date" type="date" required />
-            </div>
-
-            <div class="field">
-              <label for="time">Preferred Time</label>
-              <input id="time" name="Preferred Time" type="time" />
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="notes">Notes / Add-Ons</label>
-            <textarea id="notes" name="Notes" placeholder="Add-ons, special requests, gate codes, access notes, etc."></textarea>
-            <span class="help">
-              Common add-ons: inside oven, fridge, interior windows, pet cleanup, garage or patio sweep.
-            </span>
-          </div>
-
-          <div class="checkbox">
-            <input id="consent" type="checkbox" required />
-            <label for="consent">
-              I understand this is a booking request and final pricing will be confirmed before service.
-            </label>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Submit Booking Request</button>
-            <span class="help">We typically respond within a few hours.</span>
-          </div>
-
-          <div class="notice">
-            <strong>Satisfaction Guaranteed.</strong>
-            If something isn’t right, let us know within 24 hours and we’ll make it right.
-          </div>
-
-        </form>
       </div>
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar stack" id="fast-quote">
-
-        <div class="card soft">
-          <h3>Fast Quote Tips</h3>
-          <ul class="list">
-            <li>Accurate bed/bath count helps pricing</li>
-            <li>Let us know if it’s a first-time clean</li>
-            <li>Mention pets and heavy buildup</li>
-            <li>Add-ons can be bundled to save</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Typical Temecula Pricing</h3>
-          <div class="pills">
-            <span class="pill">2 Bed / 2 Bath <strong>$110–$140</strong></span>
-            <span class="pill">Deep Clean <strong>$160–$320</strong></span>
-            <span class="pill">Move-Out <strong>$199+</strong></span>
-          </div>
-        </div>
-
-        <div class="card soft">
-          <h3>Operating Hours</h3>
-          <p class="muted">
-            Monday – Saturday<br />
-            8:00am – 6:00pm
-          </p>
-          <div class="hr"></div>
-          <p class="small muted">
-            Same-day and next-day availability often available.
-          </p>
-        </div>
-
-      </aside>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -227,7 +229,7 @@
       <div class="stack">
         <div class="brand">
           <img src="assets/tt-logo.png" alt="T&T Temecula Cleaning Services logo" />
-          <strong>T & T Temecula Cleaning Services</strong>
+          <strong>T &amp; T Temecula Cleaning Services</strong>
         </div>
         <small>
           Explosive Clean. Professional Results.<br />
