@@ -82,8 +82,8 @@ body::before {
   inset: 0;
   background-image: url("assets/tt-logo.png");
   background-repeat: repeat;
-  background-size: 420px;
-  opacity: 0.055;
+  background-size: 440px;
+  opacity: 0.05;
   pointer-events: none;
   transform: rotate(-12deg) scale(1.05);
   filter: blur(0.8px);
@@ -109,21 +109,23 @@ footer,
   --aqua: #12d6c5;
   --aqua-2: #5cefe4;
 
-  --bg: radial-gradient(1200px 700px at 12% 8%, rgba(18, 214, 197, 0.12), transparent 55%),
-    radial-gradient(900px 560px at 86% 14%, rgba(255, 90, 31, 0.12), transparent 55%),
-    linear-gradient(180deg, #fbfcff, #f4f7ff);
+  --bg: radial-gradient(1200px 700px at 12% 8%, rgba(18, 214, 197, 0.11), transparent 58%),
+    radial-gradient(900px 560px at 86% 14%, rgba(255, 90, 31, 0.10), transparent 60%),
+    linear-gradient(180deg, #fcfdff, #f3f6ff);
 
-  --surface: rgba(255, 255, 255, 0.78);
-  --surface-2: rgba(255, 255, 255, 0.92);
-  --card: rgba(255, 255, 255, 0.88);
-  --border: rgba(11, 21, 48, 0.12);
+  /* surface contrast */
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-2: rgba(255, 255, 255, 0.90);
+  --card: rgba(255, 255, 255, 0.86);
+  --border: rgba(11, 21, 48, 0.14);
 
-  --text: #0c1426;
-  --muted: rgba(12, 20, 38, 0.74);
-  --muted-2: rgba(12, 20, 38, 0.62);
+  --text: #0b1426;
+  --muted: rgba(11, 20, 38, 0.74);
+  --muted-2: rgba(11, 20, 38, 0.62);
 
-  --shadow: 0 20px 50px rgba(11, 21, 48, 0.14);
-  --shadow-soft: 0 10px 26px rgba(11, 21, 48, 0.12);
+  --shadow: 0 22px 55px rgba(11, 21, 48, 0.14);
+  --shadow-soft: 0 12px 28px rgba(11, 21, 48, 0.12);
+  --shadow-field: 0 10px 18px rgba(11, 21, 48, 0.07);
 
   --radius: 18px;
   --radius-sm: 12px;
@@ -279,14 +281,14 @@ footer,
 
 /* ----- Cards ----- */
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.80));
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   padding: 1.1rem;
 }
 .card.soft {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.74);
   box-shadow: none;
 }
 .card.lift {
@@ -333,7 +335,7 @@ footer,
   transform: translateY(-2px);
 }
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.84);
   color: var(--text);
   border: 1px solid var(--border);
   box-shadow: 0 10px 22px rgba(11, 21, 48, 0.08);
@@ -345,11 +347,11 @@ footer,
 }
 .btn-ghost {
   background: transparent;
-  border: 1px solid rgba(11, 21, 48, 0.14);
+  border: 1px solid rgba(11, 21, 48, 0.18);
   color: var(--text);
 }
 .btn-ghost:hover {
-  border-color: color-mix(in oklab, var(--orange), rgba(11, 21, 48, 0.14) 60%);
+  border-color: color-mix(in oklab, var(--orange), rgba(11, 21, 48, 0.18) 60%);
   box-shadow: 0 14px 28px rgba(11, 21, 48, 0.12);
   transform: translateY(-2px);
 }
@@ -367,9 +369,9 @@ footer,
   gap: 0.6rem;
   padding: 0.75rem 0.9rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(11, 21, 48, 0.14);
+  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.09);
 }
 .badge .dot {
   width: 10px;
@@ -384,7 +386,7 @@ footer,
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(252, 253, 255, 0.74);
+  background: rgba(252, 253, 255, 0.76);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(11, 21, 48, 0.12);
 }
@@ -401,19 +403,6 @@ footer,
   gap: 0.75rem;
   min-width: 0;
 }
-
-/* REMOVE BOXY LOGO STYLING (CRITICAL) */
-.brand img {
-  width: 40px;
-  height: 40px;
-  border-radius: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  filter: drop-shadow(0 6px 14px rgba(11, 21, 48, 0.12));
-}
-
 .brand .title {
   display: grid;
   line-height: 1.1;
@@ -439,8 +428,8 @@ footer,
   color: var(--muted);
   border: 1px solid transparent;
   transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease),
-    color var(--dur) var(--ease), transform var(--dur) var(--ease);
-  font-weight: 700;
+    color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  font-weight: 800;
 }
 .nav-links a:hover {
   color: var(--text);
@@ -470,9 +459,9 @@ footer,
   position: absolute;
   inset: -40% -20% auto -20%;
   height: 140%;
-  background: radial-gradient(closest-side at 18% 28%, rgba(18, 214, 197, 0.25), transparent 62%),
+  background: radial-gradient(closest-side at 18% 28%, rgba(18, 214, 197, 0.24), transparent 62%),
     radial-gradient(closest-side at 82% 24%, rgba(255, 90, 31, 0.22), transparent 60%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.35));
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.34));
   z-index: -2;
 }
 .hero::after {
@@ -484,8 +473,6 @@ footer,
   filter: blur(22px);
   z-index: -2;
 }
-
-/* Optional hero watermark overlay (kept subtle and non-boxy) */
 .hero > .container {
   position: relative;
 }
@@ -506,8 +493,8 @@ footer,
 .hero-card {
   border-radius: 26px;
   padding: 1.2rem;
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
+  border: 1px solid rgba(11, 21, 48, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.76));
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
@@ -537,7 +524,7 @@ footer,
   margin-top: 0.35rem;
 }
 
-/* REMOVE BOXY HERO LOGO STYLING (CRITICAL) */
+/* ----- Hero Logo (clean) ----- */
 .hero-logo {
   display: grid;
   place-items: center;
@@ -549,11 +536,6 @@ footer,
 .hero-logo img {
   width: min(220px, 70vw);
   height: auto;
-  padding: 0;
-  border-radius: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
   filter: drop-shadow(0 18px 44px rgba(11, 21, 48, 0.14));
 }
 .hero-logo .mini {
@@ -609,16 +591,16 @@ h3 {
 .pill {
   padding: 0.55rem 0.75rem;
   border-radius: 999px;
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(11, 21, 48, 0.14);
+  background: rgba(255, 255, 255, 0.84);
   color: var(--muted);
-  font-weight: 800;
+  font-weight: 900;
   font-size: var(--step--1);
-  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.08);
+  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.09);
 }
 .pill strong {
   color: var(--text);
-  font-weight: 900;
+  font-weight: 950;
   margin-left: 0.35rem;
 }
 
@@ -645,10 +627,10 @@ h3 {
   padding: 0.35rem 0.55rem;
   border-radius: 999px;
   background: rgba(18, 214, 197, 0.14);
-  border: 1px solid rgba(18, 214, 197, 0.2);
+  border: 1px solid rgba(18, 214, 197, 0.22);
   color: var(--text);
   font-size: var(--step--1);
-  font-weight: 900;
+  font-weight: 950;
 }
 .price-note {
   color: var(--muted);
@@ -666,7 +648,7 @@ h3 {
   gap: 0.35rem;
 }
 label {
-  font-weight: 900;
+  font-weight: 950;
   font-size: 0.95rem;
 }
 input[type="text"],
@@ -679,12 +661,12 @@ textarea {
   width: 100%;
   padding: 0.85rem 0.9rem;
   border-radius: 14px;
-  border: 1px solid rgba(11, 21, 48, 0.14);
-  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(11, 21, 48, 0.16);
+  background: rgba(255, 255, 255, 0.94);
   color: var(--text);
-  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.06);
+  box-shadow: var(--shadow-field);
   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
-    transform var(--dur) var(--ease);
+    transform var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 textarea {
   min-height: 110px;
@@ -697,7 +679,7 @@ textarea::placeholder {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: rgba(18, 214, 197, 0.45);
+  border-color: rgba(18, 214, 197, 0.48);
   box-shadow: 0 0 0 4px rgba(18, 214, 197, 0.18), 0 16px 26px rgba(11, 21, 48, 0.10);
 }
 input:hover,
@@ -721,9 +703,9 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
   gap: 0.6rem;
   padding: 0.75rem;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(11, 21, 48, 0.14);
+  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.09);
 }
 .checkbox input {
   width: 18px;
@@ -749,11 +731,11 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
 
 /* ----- FAQ Accordion (details/summary) ----- */
 .faq details {
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(11, 21, 48, 0.14);
+  background: rgba(255, 255, 255, 0.82);
   border-radius: var(--radius);
   padding: 0.9rem 1rem;
-  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.08);
+  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.09);
 }
 .faq details + details {
   margin-top: 0.75rem;
@@ -776,16 +758,16 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
   border-radius: 999px;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(11, 21, 48, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(11, 21, 48, 0.14);
   flex: 0 0 auto;
   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease),
     box-shadow var(--dur) var(--ease);
-  box-shadow: 0 10px 16px rgba(11, 21, 48, 0.08);
+  box-shadow: 0 10px 16px rgba(11, 21, 48, 0.09);
 }
 .faq details[open] summary .chev {
   transform: rotate(180deg);
-  border-color: rgba(18, 214, 197, 0.28);
+  border-color: rgba(18, 214, 197, 0.30);
 }
 .faq p {
   margin-top: 0.7rem;
@@ -796,7 +778,7 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
 .footer {
   padding: 2.25rem 0;
   border-top: 1px solid rgba(11, 21, 48, 0.12);
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.58);
   backdrop-filter: blur(8px);
 }
 .footer-grid {
@@ -825,10 +807,10 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
 .banner {
   border-radius: 22px;
   padding: 1.1rem;
-  border: 1px solid rgba(11, 21, 48, 0.12);
+  border: 1px solid rgba(11, 21, 48, 0.14);
   background: radial-gradient(circle at 15% 35%, rgba(18, 214, 197, 0.16), transparent 55%),
     radial-gradient(circle at 85% 25%, rgba(255, 90, 31, 0.12), transparent 58%),
-    rgba(255, 255, 255, 0.74);
+    rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow-soft);
 }
 .banner strong {
@@ -850,11 +832,11 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
 .area-strip {
   border-radius: 18px;
   padding: 1rem;
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(11, 21, 48, 0.14);
+  background: rgba(255, 255, 255, 0.78);
   display: grid;
   gap: 0.65rem;
-  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.08);
+  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.09);
 }
 .area-strip .cities {
   display: flex;
@@ -864,12 +846,12 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
 .city {
   padding: 0.4rem 0.65rem;
   border-radius: 999px;
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(11, 21, 48, 0.14);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--muted);
-  font-weight: 900;
+  font-weight: 950;
   font-size: var(--step--1);
-  box-shadow: 0 10px 16px rgba(11, 21, 48, 0.06);
+  box-shadow: 0 10px 16px rgba(11, 21, 48, 0.07);
 }
 
 /* ----- Two-Column Page Layout ----- */
@@ -922,15 +904,6 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
   font-weight: 950;
 }
 
-/* ----- Light Background Logo Safety (kept, but subtle) ----- */
-.logo-on-light {
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(11, 21, 48, 0.12);
-  padding: 8px;
-  border-radius: 16px;
-  box-shadow: 0 10px 16px rgba(11, 21, 48, 0.06);
-}
-
 /* ----- Small top utility bar for phone/email ----- */
 .topline {
   display: flex;
@@ -952,18 +925,18 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
   gap: 0.5rem;
   padding: 0.45rem 0.7rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(11, 21, 48, 0.12);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(11, 21, 48, 0.14);
   color: var(--muted);
   font-weight: 900;
   font-size: var(--step--1);
-  box-shadow: 0 10px 16px rgba(11, 21, 48, 0.06);
+  box-shadow: 0 10px 16px rgba(11, 21, 48, 0.07);
   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease),
     color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 .chip:hover {
   color: var(--text);
-  border-color: rgba(18, 214, 197, 0.22);
+  border-color: rgba(18, 214, 197, 0.24);
   box-shadow: 0 14px 22px rgba(11, 21, 48, 0.10);
   transform: translateY(-1px);
 }
@@ -1018,4 +991,87 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* =========================
+   CRITICAL OVERRIDES (near end)
+   1) Remove boxed logo styling everywhere
+   2) Ensure high-contrast surfaces across UI elements
+   ========================= */
+
+/* 1) LOGOS: never boxed, never padded, never bordered */
+.navbar .brand img,
+.hero .hero-logo img,
+footer .brand img,
+.brand img {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.navbar .brand,
+footer .brand,
+.hero .hero-logo {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* If any legacy “logo-on-light” wrapper exists, neutralize it so it can’t box logos */
+.logo-on-light {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Keep only subtle, light-mode-friendly drop-shadow on logo images */
+.navbar .brand img,
+footer .brand img {
+  filter: drop-shadow(0 6px 14px rgba(11, 21, 48, 0.12));
+}
+.hero .hero-logo img {
+  filter: drop-shadow(0 18px 44px rgba(11, 21, 48, 0.14));
+}
+
+/* 2) GLOBAL SURFACE CONTRAST: ensure cards/strips/faq/pills/badges/fields stand out */
+.card,
+.banner,
+.area-strip,
+.faq details,
+.pill,
+.badge,
+.checkbox {
+  border-color: rgba(11, 21, 48, 0.16);
+}
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.80));
+  box-shadow: var(--shadow-soft);
+}
+.banner {
+  background: radial-gradient(circle at 15% 35%, rgba(18, 214, 197, 0.16), transparent 55%),
+    radial-gradient(circle at 85% 25%, rgba(255, 90, 31, 0.12), transparent 58%),
+    rgba(255, 255, 255, 0.80);
+  box-shadow: var(--shadow-soft);
+}
+.area-strip,
+.faq details,
+.pill,
+.badge,
+.checkbox {
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 18px rgba(11, 21, 48, 0.09);
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(11, 21, 48, 0.18);
+  box-shadow: var(--shadow-field);
 }
