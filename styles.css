@@ -1075,3 +1075,92 @@ textarea {
   border-color: rgba(11, 21, 48, 0.18);
   box-shadow: var(--shadow-field);
 }
+/* =========================
+   EMERGENCY FIX — paste THIS at the VERY END of styles.css
+   (Prevents giant logo rendering + kills any “boxed logo” styling everywhere)
+   ========================= */
+
+/* 1) Hard constrain ANY instance of the TT logo so it can’t blow up layout */
+img[src$="assets/tt-logo.png"],
+img[src$="tt-logo.png"]{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Navbar / Footer logo sizing (lock it down) */
+.navbar .brand img{
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+}
+.footer .brand img{
+  width: 34px;
+  height: 34px;
+  max-width: 34px;
+  max-height: 34px;
+  object-fit: contain;
+}
+
+/* Hero logo sizing (prevents the huge logo takeover) */
+.hero-logo img{
+  width: min(260px, 70vw);
+  height: auto;
+  max-width: 260px;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+/* 2) Kill “boxed logo” look everywhere (wins against earlier rules) */
+.navbar .brand img,
+.hero .hero-logo img,
+.footer .brand img{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+}
+
+/* If any wrapper class tries to “card” the logo, neutralize it */
+.logo-on-light,
+.brand.logo-on-light,
+.hero-logo.logo-on-light{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* 3) Navbar layout safety (prevents weird wrap/stack causing layout to look broken) */
+.nav-inner{
+  align-items: center;
+}
+.brand{
+  flex: 0 0 auto;
+}
+.nav-links{
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+@media (max-width: 860px){
+  .nav-inner{
+    flex-wrap: wrap;
+  }
+  .nav-links{
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* 4) Watermark safety (ensures it never looks like a foreground “boxed image”) */
+body::before{
+  opacity: 0.045;          /* slightly lower = safer on light theme */
+  filter: blur(1px);
+  background-size: 420px;
+}
