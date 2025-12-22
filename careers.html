@@ -19,6 +19,9 @@
 
 <body>
 
+  <!-- A11Y: Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- NAVBAR (PRESERVED) -->
   <header class="navbar">
     <div class="container nav-inner">
@@ -42,13 +45,19 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO (PRESERVED CLASSES) -->
     <section class="hero">
       <div class="container hero-card shine-sweep">
-        <div class="hero-grid">
 
-          <div class="stack">
+        <!-- Subtle watermark (CSS will keep very low opacity) -->
+        <div class="watermark" aria-hidden="true">
+          <img src="assets/tt-logo.png" alt="" />
+        </div>
+
+        <div class="hero-grid hero-grid-premium">
+
+          <div class="stack hero-copy">
             <span class="kicker">Careers</span>
             <h1>Work With T &amp; T</h1>
             <p class="lead">
@@ -61,23 +70,38 @@
               <a href="tel:+17605760723" class="btn btn-secondary">Call (760) 576-0723</a>
             </div>
 
-            <div class="badge-row">
+            <div class="badge-row" aria-label="What matters here">
               <div class="badge">
-                <span class="dot"></span>
+                <span class="dot" aria-hidden="true"></span>
                 Professional Communication
               </div>
               <div class="badge">
-                <span class="dot"></span>
+                <span class="dot" aria-hidden="true"></span>
                 Detail-Oriented Work
               </div>
               <div class="badge">
-                <span class="dot"></span>
+                <span class="dot" aria-hidden="true"></span>
                 Reliability Required
+              </div>
+            </div>
+
+            <div class="proof-strip" aria-label="Hiring notes">
+              <div class="proof">
+                <strong>Respectful work</strong>
+                <span class="muted">We clean in real homes.</span>
+              </div>
+              <div class="proof">
+                <strong>Checklist-driven</strong>
+                <span class="muted">Consistency matters.</span>
+              </div>
+              <div class="proof">
+                <strong>Clear follow-up</strong>
+                <span class="muted">Phone or email response.</span>
               </div>
             </div>
           </div>
 
-          <aside class="card soft shine-lines" aria-label="Quick requirements">
+          <aside class="card soft shine-lines hero-aside" aria-label="Quick requirements">
             <div class="stack">
               <h3>Quick Requirements</h3>
               <p class="muted">
@@ -116,7 +140,7 @@
       <div class="container page-grid">
 
         <!-- FORM CARD -->
-        <div class="card">
+        <div class="card form-shell">
           <form class="form" action="mailto:careers@temeculacleaners.com" method="post" enctype="text/plain">
 
             <div class="section-head">
@@ -127,80 +151,91 @@
               </p>
             </div>
 
-            <div class="grid grid-2">
-              <div class="field">
-                <label for="fullName">Full Name</label>
-                <input id="fullName" name="Full Name" type="text" placeholder="Full legal name" required />
+            <!-- Group: Contact -->
+            <fieldset class="fieldset">
+              <legend class="legend">Contact</legend>
+
+              <div class="grid grid-2">
+                <div class="field">
+                  <label for="fullName">Full Name</label>
+                  <input id="fullName" name="Full Name" type="text" placeholder="Full legal name" required />
+                </div>
+
+                <div class="field">
+                  <label for="phoneEmail">Phone / Email</label>
+                  <input id="phoneEmail" name="Phone / Email" type="text" placeholder="(951) 555-1234 | you@email.com" required />
+                </div>
               </div>
 
-              <div class="field">
-                <label for="phoneEmail">Phone / Email</label>
-                <input id="phoneEmail" name="Phone / Email" type="text" placeholder="(951) 555-1234 | you@email.com" required />
-              </div>
-            </div>
+              <div class="grid grid-2">
+                <div class="field">
+                  <label for="city">City (Temecula / Murrieta / etc.)</label>
+                  <input id="city" name="City" type="text" placeholder="Temecula, Murrieta, Menifee..." required />
+                </div>
 
-            <div class="grid grid-2">
-              <div class="field">
-                <label for="city">City (Temecula / Murrieta / etc.)</label>
-                <input id="city" name="City" type="text" placeholder="Temecula, Murrieta, Menifee..." required />
+                <div class="field">
+                  <label for="availability">Availability (days / times)</label>
+                  <input id="availability" name="Availability" type="text" placeholder="Mon–Fri 9am–2pm, Sat mornings..." required />
+                </div>
               </div>
+            </fieldset>
 
-              <div class="field">
-                <label for="availability">Availability (days / times)</label>
-                <input id="availability" name="Availability" type="text" placeholder="Mon–Fri 9am–2pm, Sat mornings..." required />
-              </div>
-            </div>
+            <!-- Group: Basics -->
+            <fieldset class="fieldset">
+              <legend class="legend">Basics</legend>
 
-            <div class="grid grid-3">
-              <div class="field">
-                <label for="transportation">Reliable transportation?</label>
-                <select id="transportation" name="Reliable Transportation" required>
-                  <option value="">Select</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
-              </div>
+              <div class="grid grid-3">
+                <div class="field">
+                  <label for="transportation">Reliable transportation?</label>
+                  <select id="transportation" name="Reliable Transportation" required>
+                    <option value="">Select</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
 
-              <div class="field">
-                <label for="experience">Prior cleaning experience?</label>
-                <select id="experience" name="Prior Cleaning Experience" required>
-                  <option value="">Select</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
-              </div>
+                <div class="field">
+                  <label for="experience">Prior cleaning experience?</label>
+                  <select id="experience" name="Prior Cleaning Experience" required>
+                    <option value="">Select</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
 
-              <div class="field">
-                <label for="physicalWork">Comfortable with physical work?</label>
-                <select id="physicalWork" name="Comfortable With Physical Work" required>
-                  <option value="">Select</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="grid grid-2">
-              <div class="field">
-                <label for="backgroundCheck">Can pass background check?</label>
-                <select id="backgroundCheck" name="Can Pass Background Check" required>
-                  <option value="">Select</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
+                <div class="field">
+                  <label for="physicalWork">Comfortable with physical work?</label>
+                  <select id="physicalWork" name="Comfortable With Physical Work" required>
+                    <option value="">Select</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
               </div>
 
-              <div class="field">
-                <label for="role">Preferred role</label>
-                <select id="role" name="Preferred Role" required>
-                  <option value="">Select a role</option>
-                  <option>Residential</option>
-                  <option>Airbnb turnovers</option>
-                  <option>Office</option>
-                </select>
-              </div>
-            </div>
+              <div class="grid grid-2">
+                <div class="field">
+                  <label for="backgroundCheck">Can pass background check?</label>
+                  <select id="backgroundCheck" name="Can Pass Background Check" required>
+                    <option value="">Select</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
 
+                <div class="field">
+                  <label for="role">Preferred role</label>
+                  <select id="role" name="Preferred Role" required>
+                    <option value="">Select a role</option>
+                    <option>Residential</option>
+                    <option>Airbnb turnovers</option>
+                    <option>Office</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Details -->
             <div class="field">
               <label for="experienceDetails">Experience details (if any)</label>
               <textarea id="experienceDetails" name="Experience Details" placeholder="Where have you worked? What types of cleans? How long?"></textarea>
@@ -262,11 +297,16 @@
               We review applications quickly and follow up by phone or email if there’s a fit.
             </div>
 
+            <p class="small muted form-privacy">
+              By submitting, your email app will open to send your application to careers@temeculacleaners.com.
+              We only use your info to evaluate fit and scheduling.
+            </p>
+
           </form>
         </div>
 
         <!-- SIDEBAR -->
-        <aside class="sidebar stack" aria-label="Careers info sidebar">
+        <aside class="sidebar stack sidebar-sticky" aria-label="Careers info sidebar">
 
           <div class="card soft">
             <h3>How to Apply</h3>
@@ -298,6 +338,15 @@
               <span class="pill">Clean record <strong>preferred</strong></span>
               <span class="pill">Good attitude <strong>required</strong></span>
             </div>
+          </div>
+
+          <div class="card soft">
+            <h3>What Happens Next</h3>
+            <ol class="list list-steps">
+              <li>We review your info and availability.</li>
+              <li>If there’s a match, we contact you by phone or email.</li>
+              <li>We schedule a quick next-step conversation.</li>
+            </ol>
           </div>
 
         </aside>

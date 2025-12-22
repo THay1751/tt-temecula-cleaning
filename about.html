@@ -18,6 +18,9 @@
 
 <body>
 
+  <!-- A11Y: Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- NAVBAR (PRESERVED) -->
   <header class="navbar">
     <div class="container nav-inner">
@@ -41,13 +44,19 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO (PRESERVED CLASSES) -->
     <section class="hero">
       <div class="container hero-card shine-sweep">
-        <div class="hero-grid">
 
-          <div class="stack">
+        <!-- Subtle watermark (CSS will keep very low opacity) -->
+        <div class="watermark" aria-hidden="true">
+          <img src="assets/tt-logo.png" alt="" />
+        </div>
+
+        <div class="hero-grid hero-grid-premium">
+
+          <div class="stack hero-copy">
             <span class="kicker">About Us</span>
             <h1>Local. Reliable. Built on Pride.</h1>
             <p class="lead">
@@ -55,9 +64,24 @@
               without cutting corners — combining professional systems with
               personal accountability.
             </p>
+
+            <div class="proof-strip" aria-label="What we stand for">
+              <div class="proof">
+                <strong>Professional systems</strong>
+                <span class="muted">Checklists + consistent process.</span>
+              </div>
+              <div class="proof">
+                <strong>Personal accountability</strong>
+                <span class="muted">We treat your home with respect.</span>
+              </div>
+              <div class="proof">
+                <strong>Noticeable results</strong>
+                <span class="muted">Clean you can feel immediately.</span>
+              </div>
+            </div>
           </div>
 
-          <aside class="card soft shine-lines" aria-label="What you can expect">
+          <aside class="card soft shine-lines hero-aside" aria-label="What you can expect">
             <div class="stack">
               <h3>What You Can Expect</h3>
               <p class="muted">
@@ -95,22 +119,47 @@
           </p>
         </div>
 
-        <div class="card">
-          <p class="muted">
-            As a locally operated business, we saw a gap in the Temecula market.
-            Too many cleaning services rushed jobs, changed pricing last-minute,
-            or failed to deliver consistent results.
-          </p>
-          <p class="muted">
-            Our approach is different. We focus on clear communication,
-            transparent pricing, and doing the job right the first time —
-            whether it’s a recurring home clean, a deep seasonal reset,
-            or a detailed move-out service.
-          </p>
-          <p class="muted">
-            “Twice as Clean” isn’t about speed alone — it’s about impact.
-            When we clean, you feel the difference immediately.
-          </p>
+        <div class="grid story-grid">
+          <div class="card">
+            <p class="muted">
+              As a locally operated business, we saw a gap in the Temecula market.
+              Too many cleaning services rushed jobs, changed pricing last-minute,
+              or failed to deliver consistent results.
+            </p>
+            <p class="muted">
+              Our approach is different. We focus on clear communication,
+              transparent pricing, and doing the job right the first time —
+              whether it’s a recurring home clean, a deep seasonal reset,
+              or a detailed move-out service.
+            </p>
+            <p class="muted">
+              “Twice as Clean” isn’t about speed alone — it’s about impact.
+              When we clean, you feel the difference immediately.
+            </p>
+          </div>
+
+          <aside class="card soft">
+            <div class="stack">
+              <h3>How We Work</h3>
+              <p class="muted small">
+                A clean process creates consistent results. Every visit is guided by a checklist,
+                and we focus on the details that matter most.
+              </p>
+
+              <div class="hr"></div>
+
+              <ul class="list">
+                <li>Confirm expectations before we begin</li>
+                <li>Use a room-by-room approach for consistency</li>
+                <li>Finish with a reset: floors, surfaces, and high-touch areas</li>
+              </ul>
+
+              <div class="cta-row">
+                <a href="book.html" class="btn btn-ghost">Request a Quote</a>
+                <a href="packages.html" class="btn btn-secondary">See Packages</a>
+              </div>
+            </div>
+          </aside>
         </div>
 
       </div>
@@ -154,6 +203,28 @@
             </p>
           </div>
 
+        </div>
+
+        <!-- Standards strip (no new functionality) -->
+        <div class="standards-strip card soft" aria-label="Service standards">
+          <div class="standards-grid">
+            <div class="standard">
+              <strong>Clear communication</strong>
+              <span class="muted">Upfront expectations.</span>
+            </div>
+            <div class="standard">
+              <strong>Professional supplies</strong>
+              <span class="muted">Reliable equipment.</span>
+            </div>
+            <div class="standard">
+              <strong>Checklist process</strong>
+              <span class="muted">Consistent outcomes.</span>
+            </div>
+            <div class="standard">
+              <strong>Guarantee</strong>
+              <span class="muted">We make it right.</span>
+            </div>
+          </div>
         </div>
 
       </div>

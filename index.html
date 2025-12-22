@@ -19,12 +19,14 @@
 
 <body>
 
+  <!-- A11Y: Skip link (does not change functionality) -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- NAVBAR (STRUCTURE + CLASSES PRESERVED) -->
   <header class="navbar">
     <div class="container nav-inner">
 
       <a class="brand" href="index.html" aria-label="T & T Temecula Cleaning Services Home">
-        <!-- LOGO: keep same file path to avoid breaking anything -->
         <img src="assets/tt-logo.png" alt="T&amp;T Temecula Cleaning Services logo" />
         <div class="title">
           <strong>T &amp; T Temecula</strong>
@@ -43,31 +45,31 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO (CLASSES PRESERVED) -->
     <section class="hero">
       <div class="container hero-card shine-sweep">
 
-		<!-- NEW: SOCIAL DROP-IN LOCATION (UNDER THE HEAD BANNER / HERO TOP) -->
-		<div class="social-drop" aria-label="Social links">
-		  <a class="social-link" href="https://www.instagram.com/t_t_temeculacleaning" target="_blank" rel="noopener">Instagram</a>
-		  <span class="social-sep" aria-hidden="true">•</span>
+        <!-- SOCIAL LINKS (PRESERVED) -->
+        <div class="social-drop" aria-label="Social links">
+          <a class="social-link" href="https://www.instagram.com/t_t_temeculacleaning" target="_blank" rel="noopener">Instagram</a>
+          <span class="social-sep" aria-hidden="true">•</span>
 
-		  <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
-		  <span class="social-sep" aria-hidden="true">•</span>
+          <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+          <span class="social-sep" aria-hidden="true">•</span>
 
-		  <a class="social-link" href="https://x.com/TTTemeculaClean" target="_blank" rel="noopener">X</a>
-		  <span class="social-sep" aria-hidden="true">•</span>
+          <a class="social-link" href="https://x.com/TTTemeculaClean" target="_blank" rel="noopener">X</a>
+          <span class="social-sep" aria-hidden="true">•</span>
 
-		  <a class="social-link" href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
-		</div>
+          <a class="social-link" href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        </div>
 
+        <div class="hero-grid hero-grid-premium">
 
-        <div class="hero-grid">
-
-          <div class="stack">
+          <div class="stack hero-copy">
             <span class="kicker">Temecula’s Trusted Cleaning Pros</span>
             <h1>Twice as Clean.<br />Professional Results.</h1>
+
             <p class="lead">
               Local, reliable residential and commercial cleaning services serving
               Temecula, Murrieta, Menifee, and surrounding communities.
@@ -78,24 +80,55 @@
               <a href="packages.html" class="btn btn-secondary">View Packages</a>
             </div>
 
-            <div class="badge-row">
+            <div class="badge-row" aria-label="Trust signals">
               <div class="badge">
-                <span class="dot"></span>
+                <span class="dot" aria-hidden="true"></span>
                 Licensed &amp; Insured
               </div>
               <div class="badge">
-                <span class="dot"></span>
+                <span class="dot" aria-hidden="true"></span>
                 Satisfaction Guaranteed
               </div>
               <div class="badge">
-                <span class="dot"></span>
+                <span class="dot" aria-hidden="true"></span>
                 Local &amp; Reliable
+              </div>
+            </div>
+
+            <div class="proof-strip" aria-label="Service highlights">
+              <div class="proof">
+                <strong>Detail-driven</strong>
+                <span class="muted">Every visit, every room.</span>
+              </div>
+              <div class="proof">
+                <strong>Consistent care</strong>
+                <span class="muted">Respectful, professional.</span>
+              </div>
+              <div class="proof">
+                <strong>Local focus</strong>
+                <span class="muted">Temecula &amp; nearby.</span>
               </div>
             </div>
           </div>
 
+          <!-- HERO SUPPORT IMAGE (UPDATED TO REAL ASSET) -->
+          <div class="hero-media" aria-label="Clean home photo">
+            <figure class="card hero-photo lift">
+              <img
+                class="hero-img"
+                src="assets/cleaning-gallery-3up.png"
+                alt="Clean interior examples: kitchen, bathroom vanity, and living area"
+                loading="eager"
+                decoding="async"
+              />
+              <figcaption class="muted small">
+                Calm, professional cleaning for real homes in Temecula and surrounding areas.
+              </figcaption>
+            </figure>
+          </div>
+
           <!-- QUICK INFO (PRESERVED) -->
-          <aside class="card soft shine-lines" aria-label="Quick info">
+          <aside class="card soft shine-lines hero-aside" aria-label="Quick info">
             <div class="stack">
               <h3>Quick Info</h3>
               <p class="muted">
@@ -114,9 +147,72 @@
                 <a class="btn btn-ghost" href="tel:+17605760723">Call (760) 576-0723</a>
                 <a class="btn btn-secondary" href="mailto:info@temeculacleaners.com">Email Us</a>
               </div>
+
+              <div class="mini-note muted small">
+                Prefer text? Call any time during business hours and we’ll get back to you quickly.
+              </div>
             </div>
           </aside>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL RESULTS GALLERY -->
+    <section class="section separator">
+      <div class="container">
+        <div class="section-head">
+          <h2>Real Results</h2>
+          <p>Clean, calm spaces — professionally maintained for homes, rentals, and workspaces.</p>
+        </div>
+
+        <div class="card">
+          <img
+            class="media-img"
+            src="assets/cleaning-gallery-3up.png"
+            alt="Clean kitchen, bathroom vanity, and living room in natural light"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="muted small">
+            A few examples of the standard we aim for — polished, detailed, and guest-ready.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE & AFTER SPOTLIGHT -->
+    <section class="section separator soft">
+      <div class="container">
+        <div class="section-head">
+          <h2>Before &amp; After Spotlight</h2>
+          <p>Perfect for Airbnb turnovers and add-on resets — the difference is immediate.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card lift">
+            <h3>Airbnb Bedroom Turnover</h3>
+            <p class="muted">From lived-in to guest-ready — fast, detailed, and consistent.</p>
+            <img
+              class="ba-img"
+              src="assets/airbnb-bedroom-turnover-before-after.png"
+              alt="Airbnb bedroom turnover before and after: messy room cleaned and made guest-ready"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="card lift">
+            <h3>Laundry / Utility Room Reset</h3>
+            <p class="muted">A clean utility space makes the whole home feel more organized.</p>
+            <img
+              class="ba-img"
+              src="assets/laundry-room-cleaning-before-after.png"
+              alt="Laundry utility room before and after: cluttered room cleaned and organized"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -177,6 +273,44 @@
           </div>
         </div>
 
+        <div class="section-cta card soft">
+          <div class="cta-split">
+            <div class="stack">
+              <h3>Ready to book?</h3>
+              <p class="muted">
+                Tell us what you need — we’ll confirm details and schedule the clean.
+              </p>
+            </div>
+            <div class="cta-row">
+              <a href="book.html" class="btn btn-primary">Book Now</a>
+              <a href="packages.html" class="btn btn-ghost">Compare Packages</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PATIO / OUTDOOR RESET -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Outdoor / Patio Resets</h2>
+          <p>Light patio tidying and wipe-downs available as an add-on.</p>
+        </div>
+
+        <div class="card">
+          <img
+            class="media-img"
+            src="assets/banner.png"
+            alt="Clean outdoor patio area in natural light"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="muted small">
+            Ask about patios, balconies, and outdoor seating areas.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -227,21 +361,21 @@
             <p class="quote">
               “Absolutely spotless. Best cleaning service we’ve used in Temecula.”
             </p>
-            <div class="stars">★★★★★</div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           </div>
 
           <div class="card">
             <p class="quote">
               “Professional, on time, and extremely detailed. Highly recommend.”
             </p>
-            <div class="stars">★★★★★</div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           </div>
 
           <div class="card">
             <p class="quote">
               “Our Airbnb turnovers have never been smoother.”
             </p>
-            <div class="stars">★★★★★</div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           </div>
         </div>
 
@@ -254,7 +388,7 @@
 
         <div class="area-strip">
           <strong>Service Areas</strong>
-          <div class="cities">
+          <div class="cities" aria-label="Cities served">
             <span class="city">Temecula</span>
             <span class="city">Murrieta</span>
             <span class="city">Menifee</span>

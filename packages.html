@@ -18,6 +18,9 @@
 
 <body>
 
+  <!-- A11Y: Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- NAVBAR (PRESERVED) -->
   <header class="navbar">
     <div class="container nav-inner">
@@ -41,35 +44,79 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO / INTRO (CLASSES PRESERVED) -->
     <section class="hero">
       <div class="container hero-card shine-sweep">
-        <div class="stack">
-          <span class="kicker">Packages &amp; Pricing</span>
-          <h1>Temecula Pricing That’s Competitive — With Pro-Level Detail.</h1>
-          <p class="lead">
-            Our pricing is built for typical Temecula homes (2–4 bedrooms) and aligned with local market benchmarks.
-            We’re premium-leaning because we do it right — fast, thorough, and consistent.
-          </p>
 
-          <div class="pills">
-            <span class="pill">2 bed / 2 bath Standard: <strong>$80–$140</strong></span>
-            <span class="pill">Move-Out Cleans: <strong>$180–$350+</strong></span>
-            <span class="pill">Recurring Savings: <strong>Up to 15%</strong></span>
-            <span class="pill">First-Time Discount: <strong>$20 Off</strong></span>
+        <div class="hero-grid hero-grid-premium">
+          <div class="stack hero-copy">
+            <span class="kicker">Packages &amp; Pricing</span>
+            <h1>Temecula Pricing That’s Competitive — With Pro-Level Detail.</h1>
+            <p class="lead">
+              Our pricing is built for typical Temecula homes (2–4 bedrooms) and aligned with local market benchmarks.
+              We’re premium-leaning because we do it right — fast, thorough, and consistent.
+            </p>
+
+            <div class="pills">
+              <span class="pill">2 bed / 2 bath Standard: <strong>$80–$140</strong></span>
+              <span class="pill">Move-Out Cleans: <strong>$180–$350+</strong></span>
+              <span class="pill">Recurring Savings: <strong>Up to 15%</strong></span>
+              <span class="pill">First-Time Discount: <strong>$20 Off</strong></span>
+            </div>
+
+            <div class="cta-row">
+              <a href="book.html" class="btn btn-primary">Book a Cleaning</a>
+              <a href="book.html#fast-quote" class="btn btn-secondary">Get a Fast Quote</a>
+            </div>
+
+            <p class="price-note">
+              Final pricing depends on home size, condition, pets, add-ons, and requested level of detail.
+              You’ll receive a confirmation quote before service.
+            </p>
           </div>
 
-          <div class="cta-row">
-            <a href="book.html" class="btn btn-primary">Book a Cleaning</a>
-            <a href="book.html#fast-quote" class="btn btn-secondary">Get a Fast Quote</a>
-          </div>
+          <!-- Premium hero side card -->
+          <aside class="card soft shine-lines hero-aside" aria-label="Pricing at a glance">
+            <div class="stack">
+              <h3>Pricing at a Glance</h3>
+              <p class="muted">
+                Clear ranges for common Temecula home sizes.
+              </p>
 
-          <p class="price-note">
-            Final pricing depends on home size, condition, pets, add-ons, and requested level of detail.
-            You’ll receive a confirmation quote before service.
-          </p>
+              <div class="stack">
+                <div class="mini-metric">
+                  <strong>Standard</strong>
+                  <span class="muted">Most 2/2 homes: <strong>$110–$140</strong></span>
+                </div>
+                <div class="mini-metric">
+                  <strong>Deep Clean</strong>
+                  <span class="muted">Most 2/2 homes: <strong>$160–$240</strong></span>
+                </div>
+                <div class="mini-metric">
+                  <strong>Move-Out</strong>
+                  <span class="muted">Most start at: <strong>$199</strong></span>
+                </div>
+                <div class="mini-metric">
+                  <strong>Airbnb</strong>
+                  <span class="muted">Most 2/2 turnovers: <strong>$120–$170</strong></span>
+                </div>
+              </div>
+
+              <div class="hr"></div>
+
+              <div class="stack">
+                <a class="btn btn-ghost" href="tel:+17605760723">Call (760) 576-0723</a>
+                <a class="btn btn-secondary" href="mailto:info@temeculacleaners.com">Email Us</a>
+              </div>
+
+              <p class="small muted">
+                Tip: Add-ons are best for ovens, fridges, windows, and heavy buildup.
+              </p>
+            </div>
+          </aside>
         </div>
+
       </div>
     </section>
 
@@ -88,10 +135,20 @@
         <div class="grid grid-4">
 
           <!-- STANDARD -->
-          <article class="card lift">
+          <article class="card lift package-card">
             <div class="stack">
               <span class="price-tag">Most Popular</span>
               <h3>Standard Cleaning</h3>
+
+              <figure class="media-card" aria-label="Standard cleaning photo">
+                <img
+                  class="media-img"
+                  src="assets/cleaning-gallery-3up.png"
+                  alt="Clean home examples: kitchen, bathroom vanity, and living room in natural light"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
 
               <div class="price">
                 <div class="big">$80–$220</div>
@@ -126,10 +183,20 @@
           </article>
 
           <!-- DEEP -->
-          <article class="card lift sparkle">
+          <article class="card lift sparkle package-card">
             <div class="stack">
               <span class="price-tag">Best Value</span>
               <h3>Deep Cleaning</h3>
+
+              <figure class="media-card" aria-label="Deep cleaning photo">
+                <img
+                  class="media-img"
+                  src="assets/cleaning-gallery-3up.png"
+                  alt="Professional deep-clean results: spotless kitchen, bathroom vanity, and living area"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
 
               <div class="price">
                 <div class="big">$160–$420</div>
@@ -164,7 +231,7 @@
           </article>
 
           <!-- MOVE OUT / IN -->
-          <article class="card lift shine-lines">
+          <article class="card lift shine-lines package-card">
             <div class="stack">
               <span class="price-tag">Landlord / Sale Ready</span>
               <h3>Move-In / Move-Out</h3>
@@ -202,10 +269,23 @@
           </article>
 
           <!-- AIRBNB -->
-          <article class="card lift">
+          <article class="card lift package-card">
             <div class="stack">
               <span class="price-tag">Host-Friendly</span>
               <h3>Airbnb / Turnover</h3>
+
+              <figure class="ba-card" aria-label="Airbnb turnover before and after">
+                <img
+                  class="ba-img"
+                  src="assets/airbnb-bedroom-turnover-before-after.png"
+                  alt="Airbnb bedroom turnover before and after: messy room cleaned and made guest-ready"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="muted small">
+                  Before ➜ After: guest-ready reset with a photo-ready finish.
+                </figcaption>
+              </figure>
 
               <div class="price">
                 <div class="big">$95–$260</div>
@@ -268,6 +348,31 @@
           <p class="price-note">
             Note: Add-on pricing depends on size and condition (heavy buildup, pet hair level, etc.).
           </p>
+
+          <div class="hr"></div>
+
+          <div class="addon-feature">
+            <div class="stack">
+              <strong>Laundry / Utility Cleaning (Add-On)</strong>
+              <p class="muted small">
+                Perfect for Airbnbs, busy families, and move-outs — we reset the space so it’s clean, tidy, and functional.
+              </p>
+
+              <figure class="ba-card" aria-label="Laundry and utility room before and after">
+                <img
+                  class="ba-img"
+                  src="assets/laundry-room-cleaning-before-after.png"
+                  alt="Laundry room before and after: cluttered utility space cleaned and organized"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="muted small">
+                  Before ➜ After: utility room reset that makes the whole home feel cleaner.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -460,7 +565,7 @@
     </section>
   </main>
 
-  <!-- FOOTER (PRESERVED CONTENT; ONLY FIXED INVALID PHONE TEXT) -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
 
@@ -492,4 +597,3 @@
 
 </body>
 </html>
-

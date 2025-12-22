@@ -18,6 +18,9 @@
 
 <body>
 
+  <!-- A11Y: Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- NAVBAR (PRESERVED) -->
   <header class="navbar">
     <div class="container nav-inner">
@@ -41,22 +44,62 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO (PRESERVED CLASSES) -->
     <section class="hero">
       <div class="container hero-card shine-sweep">
-        <div class="stack">
-          <span class="kicker">Book a Cleaning</span>
-          <h1>Get a Fast Quote &amp; Lock In Your Clean</h1>
-          <p class="lead">
-            Fill out the form below and we’ll confirm pricing and availability.
-            Most Temecula homes receive a same-day response.
-          </p>
+        <div class="hero-grid hero-grid-premium">
 
-          <div class="cta-row">
-            <a href="tel:+17605760723" class="btn btn-primary">Call Now</a>
-            <a href="mailto:bookings@temeculacleaners.com" class="btn btn-secondary">Email Us</a>
+          <div class="stack hero-copy">
+            <span class="kicker">Book a Cleaning</span>
+            <h1>Get a Fast Quote &amp; Lock In Your Clean</h1>
+            <p class="lead">
+              Fill out the form below and we’ll confirm pricing and availability.
+              Most Temecula homes receive a same-day response.
+            </p>
+
+            <div class="cta-row">
+              <a href="tel:+17605760723" class="btn btn-primary">Call Now</a>
+              <a href="mailto:bookings@temeculacleaners.com" class="btn btn-secondary">Email Us</a>
+            </div>
+
+            <div class="proof-strip" aria-label="Booking assurances">
+              <div class="proof">
+                <strong>Clear confirmation</strong>
+                <span class="muted">We confirm quote before service.</span>
+              </div>
+              <div class="proof">
+                <strong>Quick response</strong>
+                <span class="muted">Usually within a few hours.</span>
+              </div>
+              <div class="proof">
+                <strong>Local service</strong>
+                <span class="muted">Temecula &amp; nearby.</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Hero side card (no new functionality) -->
+          <aside class="card soft shine-lines hero-aside" aria-label="Contact and response time">
+            <div class="stack">
+              <h3>Response Time</h3>
+              <p class="muted">
+                Most requests receive a same-day reply during business hours.
+              </p>
+
+              <div class="hr"></div>
+
+              <div class="stack">
+                <a class="btn btn-ghost" href="tel:+17605760723">Call (760) 576-0723</a>
+                <a class="btn btn-secondary" href="mailto:bookings@temeculacleaners.com">Email bookings@temeculacleaners.com</a>
+              </div>
+
+              <p class="small muted">
+                No spam — just a confirmation message with pricing and available times.
+              </p>
+            </div>
+          </aside>
+
         </div>
       </div>
     </section>
@@ -66,7 +109,7 @@
       <div class="container page-grid">
 
         <!-- FORM -->
-        <div class="card">
+        <div class="card form-shell">
           <form class="form" action="mailto:bookings@temeculacleaners.com" method="post" enctype="text/plain">
 
             <div class="section-head">
@@ -76,92 +119,110 @@
               </p>
             </div>
 
-            <div class="grid grid-2">
-              <div class="field">
-                <label for="name">Full Name</label>
-                <input id="name" name="Name" type="text" placeholder="John Smith" required />
+            <!-- Group: Contact -->
+            <fieldset class="fieldset">
+              <legend class="legend">Contact</legend>
+
+              <div class="grid grid-2">
+                <div class="field">
+                  <label for="name">Full Name</label>
+                  <input id="name" name="Name" type="text" placeholder="John Smith" required />
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone Number</label>
+                  <input id="phone" name="Phone" type="tel" placeholder="(951) 555-1234" required />
+                </div>
               </div>
 
-              <div class="field">
-                <label for="phone">Phone Number</label>
-                <input id="phone" name="Phone" type="tel" placeholder="(951) 555-1234" required />
-              </div>
-            </div>
+              <div class="grid grid-2">
+                <div class="field">
+                  <label for="email">Email Address</label>
+                  <input id="email" name="Email" type="email" placeholder="you@email.com" required />
+                </div>
 
-            <div class="grid grid-2">
-              <div class="field">
-                <label for="email">Email Address</label>
-                <input id="email" name="Email" type="email" placeholder="you@email.com" required />
+                <div class="field">
+                  <label for="service">Service Type</label>
+                  <select id="service" name="Service Type" required>
+                    <option value="">Select a service</option>
+                    <option>Standard Cleaning</option>
+                    <option>Deep Cleaning</option>
+                    <option>Move-In / Move-Out</option>
+                    <option>Airbnb / Turnover</option>
+                    <option>Office / Commercial</option>
+                  </select>
+                </div>
               </div>
+            </fieldset>
 
-              <div class="field">
-                <label for="service">Service Type</label>
-                <select id="service" name="Service Type" required>
-                  <option value="">Select a service</option>
-                  <option>Standard Cleaning</option>
-                  <option>Deep Cleaning</option>
-                  <option>Move-In / Move-Out</option>
-                  <option>Airbnb / Turnover</option>
-                  <option>Office / Commercial</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="address">Service Address</label>
-              <input id="address" name="Address" type="text" placeholder="Street, City, Zip" required />
-            </div>
-
-            <div class="grid grid-3">
-              <div class="field">
-                <label for="beds">Bedrooms</label>
-                <select id="beds" name="Bedrooms">
-                  <option value="">Beds</option>
-                  <option>Studio</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5+</option>
-                </select>
-              </div>
+            <!-- Group: Property -->
+            <fieldset class="fieldset">
+              <legend class="legend">Home / Property</legend>
 
               <div class="field">
-                <label for="baths">Bathrooms</label>
-                <select id="baths" name="Bathrooms">
-                  <option value="">Baths</option>
-                  <option>1</option>
-                  <option>1.5</option>
-                  <option>2</option>
-                  <option>2.5</option>
-                  <option>3+</option>
-                </select>
+                <label for="address">Service Address</label>
+                <input id="address" name="Address" type="text" placeholder="Street, City, Zip" required />
+                <span class="help">We use this to estimate travel and confirm service area.</span>
               </div>
 
-              <div class="field">
-                <label for="pets">Pets</label>
-                <select id="pets" name="Pets">
-                  <option value="">Pets?</option>
-                  <option>No Pets</option>
-                  <option>Dog(s)</option>
-                  <option>Cat(s)</option>
-                  <option>Multiple Pets</option>
-                </select>
-              </div>
-            </div>
+              <div class="grid grid-3">
+                <div class="field">
+                  <label for="beds">Bedrooms</label>
+                  <select id="beds" name="Bedrooms">
+                    <option value="">Beds</option>
+                    <option>Studio</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5+</option>
+                  </select>
+                </div>
 
-            <div class="grid grid-2">
-              <div class="field">
-                <label for="date">Preferred Date</label>
-                <input id="date" name="Preferred Date" type="date" required />
-              </div>
+                <div class="field">
+                  <label for="baths">Bathrooms</label>
+                  <select id="baths" name="Bathrooms">
+                    <option value="">Baths</option>
+                    <option>1</option>
+                    <option>1.5</option>
+                    <option>2</option>
+                    <option>2.5</option>
+                    <option>3+</option>
+                  </select>
+                </div>
 
-              <div class="field">
-                <label for="time">Preferred Time</label>
-                <input id="time" name="Preferred Time" type="time" />
+                <div class="field">
+                  <label for="pets">Pets</label>
+                  <select id="pets" name="Pets">
+                    <option value="">Pets?</option>
+                    <option>No Pets</option>
+                    <option>Dog(s)</option>
+                    <option>Cat(s)</option>
+                    <option>Multiple Pets</option>
+                  </select>
+                </div>
               </div>
-            </div>
+            </fieldset>
 
+            <!-- Group: Schedule -->
+            <fieldset class="fieldset">
+              <legend class="legend">Preferred Schedule</legend>
+
+              <div class="grid grid-2">
+                <div class="field">
+                  <label for="date">Preferred Date</label>
+                  <input id="date" name="Preferred Date" type="date" required />
+                </div>
+
+                <div class="field">
+                  <label for="time">Preferred Time</label>
+                  <input id="time" name="Preferred Time" type="time" />
+                  <span class="help">Optional — we’ll confirm availability.</span>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Notes -->
             <div class="field">
               <label for="notes">Notes / Add-Ons</label>
               <textarea id="notes" name="Notes" placeholder="Add-ons, special requests, gate codes, access notes, etc."></textarea>
@@ -187,11 +248,16 @@
               If something isn’t right, let us know within 24 hours and we’ll make it right.
             </div>
 
+            <p class="small muted form-privacy">
+              By submitting, your email app will open to send your request to bookings@temeculacleaners.com.
+              We only use your info to confirm your quote and schedule.
+            </p>
+
           </form>
         </div>
 
         <!-- SIDEBAR -->
-        <aside class="sidebar stack" id="fast-quote" aria-label="Fast quote sidebar">
+        <aside class="sidebar stack sidebar-sticky" id="fast-quote" aria-label="Fast quote sidebar">
 
           <div class="card soft">
             <h3>Fast Quote Tips</h3>
@@ -222,6 +288,15 @@
             <p class="small muted">
               Same-day and next-day availability often available.
             </p>
+          </div>
+
+          <div class="card soft">
+            <h3>What Happens Next</h3>
+            <ol class="list list-steps">
+              <li>We review your request and confirm details.</li>
+              <li>You receive a quote and available time options.</li>
+              <li>We lock in your clean once you confirm.</li>
+            </ol>
           </div>
 
         </aside>
