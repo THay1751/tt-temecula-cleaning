@@ -1026,3 +1026,38 @@ img[src$="tt-logo.png"]{
   max-width:100%;
   object-fit:contain;
 }
+
+/* =========================
+   ADD-ONS (POLISH / ACCESSIBILITY)
+   Append-only, minimal. No functionality changes.
+   ========================= */
+
+/* Make grouped add-on details feel cleaner inside cards */
+.card .faq{ margin-top: 0.25rem; }
+.card .faq details{
+  background: rgba(255,255,255,0.94);
+}
+
+/* Summary text spacing + muted pricing alignment */
+.faq summary .muted{
+  font-weight: 850;
+  font-size: var(--step--1);
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+/* Improve tap targets without changing structure */
+.faq summary{
+  padding: 0.15rem 0;
+}
+.faq details[open]{
+  border-color: rgba(31,167,161,0.22);
+}
+
+/* Keep pill groups from feeling cramped on smaller screens */
+.pills{ row-gap: 0.65rem; }
+
+/* Banner CTA layout consistency */
+.section-cta .cta-row{
+  margin-top: 0;
+}
