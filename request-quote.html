@@ -1,0 +1,672 @@
+<!-- request-quote.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request a Quote | T & T Temecula Cleaning Services</title>
+  <meta name="description" content="Request a custom cleaning quote in Temecula. Use our price estimator for a starting range, then send details for a confirmed quote before service." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+</head>
+
+<body>
+
+  <!-- A11Y: Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAVBAR (STRUCTURE + CLASSES PRESERVED) -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a class="brand" href="index.html" aria-label="T & T Temecula Cleaning Services Home">
+        <img src="assets/tt-logo.png" alt="T&amp;T Temecula Cleaning Services logo" />
+        <div class="title">
+          <strong>T &amp; T Temecula</strong>
+          <span>Twice as Clean</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="/book">Book</a>
+        <a href="request-quote.html" aria-current="page">Request a Quote</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO (PRESERVED CLASSES) -->
+    <section class="hero">
+      <div class="container hero-card shine-sweep">
+        <div class="hero-grid hero-grid-premium">
+
+          <div class="stack hero-copy">
+            <span class="kicker">Request a Quote</span>
+            <h1>Get a Starting Range — Then a Confirmed Quote</h1>
+            <p class="lead">
+              If your home is straightforward and you’re ready to pick a time, you can book instantly.
+              If you have add-ons, special requests, or want a tailored scope, use the estimator below and send us your details.
+              We confirm final pricing before service (or on arrival) based on condition, buildup, add-ons, and scope.
+            </p>
+
+            <div class="cta-row">
+              <a href="/book" class="btn btn-primary">Book Instantly</a>
+              <a href="#quote" class="btn btn-secondary">Request a Quote</a>
+            </div>
+
+            <div class="proof-strip" aria-label="Quote assurances">
+              <div class="proof">
+                <strong>Range first</strong>
+                <span class="muted">See a realistic starting range.</span>
+              </div>
+              <div class="proof">
+                <strong>Clear confirmation</strong>
+                <span class="muted">Final pricing confirmed before service.</span>
+              </div>
+              <div class="proof">
+                <strong>Local service</strong>
+                <span class="muted">Temecula &amp; nearby.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero side card (no new functionality) -->
+          <aside class="card soft shine-lines hero-aside" aria-label="Contact and response time">
+            <div class="stack">
+              <h3>Prefer Instant Booking?</h3>
+              <p class="muted">
+                Choose a service time online — then we’ll confirm details and any add-ons.
+              </p>
+
+              <div class="hr"></div>
+
+              <div class="stack">
+                <a class="btn btn-primary" href="/book">Book Online</a>
+                <a class="btn btn-ghost" href="tel:+17605760723">Call (760) 576-0723</a>
+              </div>
+
+              <p class="small muted">
+                For custom scopes, use the estimator + quote request form below.
+              </p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTIMATOR + FORM + SIDEBAR (STRUCTURE + CLASSES PRESERVED) -->
+    <section class="section separator" id="quote">
+      <div class="container page-grid">
+
+        <!-- MAIN COLUMN -->
+        <div class="stack" style="gap:1.25rem;">
+
+          <!-- ESTIMATOR -->
+          <div class="card form-shell">
+            <div class="section-head">
+              <h2>Price Estimator</h2>
+              <p>
+                This estimator provides a starting range based on bedrooms/bathrooms and service type.
+                Final pricing depends on condition, buildup, add-ons, and scope, and is confirmed before service (or on arrival).
+              </p>
+            </div>
+
+            <form class="form" id="estimator" autocomplete="off" novalidate>
+              <fieldset class="fieldset">
+                <legend class="legend">Estimate Details</legend>
+
+                <div class="grid grid-2">
+                  <div class="field">
+                    <label for="est-service">Service Type</label>
+                    <select id="est-service" required>
+                      <option value="">Select a service</option>
+                      <option value="standard">Standard Cleaning</option>
+                      <option value="deep">Deep Cleaning</option>
+                      <option value="move">Move-In / Move-Out</option>
+                      <option value="airbnb">Airbnb / Turnover</option>
+                      <option value="office">Office / Commercial</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="est-beds">Bedrooms</label>
+                    <select id="est-beds" required>
+                      <option value="">Select</option>
+                      <option value="studio">Studio</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5+</option>
+                    </select>
+                    <span class="help">Studio counts as 0 bedrooms for math, but minimums still apply.</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-3">
+                  <div class="field">
+                    <label for="est-baths">Bathrooms</label>
+                    <select id="est-baths" required>
+                      <option value="">Select</option>
+                      <option value="1">1</option>
+                      <option value="1.5">1.5</option>
+                      <option value="2">2</option>
+                      <option value="2.5">2.5</option>
+                      <option value="3">3+</option>
+                    </select>
+                    <span class="help">Half baths count as 0.5 in the estimate (not rounded).</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="est-first">First-time clean?</label>
+                    <select id="est-first" required>
+                      <option value="">Select</option>
+                      <option value="no">No</option>
+                      <option value="yes">Yes</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="est-pets">Pets?</label>
+                    <select id="est-pets" required>
+                      <option value="">Select</option>
+                      <option value="no">No</option>
+                      <option value="yes">Yes</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- OUTPUT -->
+              <div class="card soft" aria-live="polite" aria-atomic="true">
+                <div class="stack">
+                  <h3 style="margin:0;">Estimated starting range</h3>
+                  <p class="muted" id="est-output" style="margin:.25rem 0 0 0;">
+                    Select options to estimate.
+                  </p>
+
+                  <div class="pills" id="est-minimums" style="display:none;">
+                    <span class="pill" id="est-min-pill"></span>
+                    <span class="pill"><strong>Note:</strong> Add-ons and condition can change final pricing.</span>
+                  </div>
+
+                  <p class="small muted" style="margin:.5rem 0 0 0;">
+                    Final pricing depends on condition, buildup, add-ons, and scope; confirmed before service/on arrival.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="est-reset">Reset</button>
+                <span class="help">Use this range as a starting point, then send the form below for a confirmed quote.</span>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- QUOTE REQUEST FORM (MAILTO) -->
+          <div class="card form-shell">
+            <form class="form" action="mailto:bookings@temeculacleaners.com" method="post" enctype="text/plain">
+
+              <div class="section-head">
+                <h2>Quote Request</h2>
+                <p>
+                  Send your details and we’ll confirm scope, pricing, and availability.
+                  If you prefer to choose a time first, you can <a class="link" href="/book">book instantly</a>.
+                </p>
+              </div>
+
+              <!-- Group: Contact -->
+              <fieldset class="fieldset">
+                <legend class="legend">Contact</legend>
+
+                <div class="grid grid-2">
+                  <div class="field">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="Name" type="text" placeholder="John Smith" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="Phone" type="tel" placeholder="(951) 555-1234" required />
+                  </div>
+                </div>
+
+                <div class="grid grid-2">
+                  <div class="field">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="Email" type="email" placeholder="you@email.com" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="service">Service Type</label>
+                    <select id="service" name="Service Type" required>
+                      <option value="">Select a service</option>
+                      <option>Standard Cleaning</option>
+                      <option>Deep Cleaning</option>
+                      <option>Move-In / Move-Out</option>
+                      <option>Airbnb / Turnover</option>
+                      <option>Office / Commercial</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Group: Property -->
+              <fieldset class="fieldset">
+                <legend class="legend">Home / Property</legend>
+
+                <div class="field">
+                  <label for="address">Service Address</label>
+                  <input id="address" name="Address" type="text" placeholder="Street, City, Zip" required />
+                  <span class="help">We use this to estimate travel and confirm service area.</span>
+                </div>
+
+                <div class="grid grid-3">
+                  <div class="field">
+                    <label for="beds">Bedrooms</label>
+                    <select id="beds" name="Bedrooms">
+                      <option value="">Beds</option>
+                      <option>Studio</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5+</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="baths">Bathrooms</label>
+                    <select id="baths" name="Bathrooms">
+                      <option value="">Baths</option>
+                      <option>1</option>
+                      <option>1.5</option>
+                      <option>2</option>
+                      <option>2.5</option>
+                      <option>3+</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="pets">Pets</label>
+                    <select id="pets" name="Pets">
+                      <option value="">Pets?</option>
+                      <option>No Pets</option>
+                      <option>Dog(s)</option>
+                      <option>Cat(s)</option>
+                      <option>Multiple Pets</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Group: Schedule -->
+              <fieldset class="fieldset">
+                <legend class="legend">Preferred Schedule</legend>
+
+                <div class="grid grid-2">
+                  <div class="field">
+                    <label for="date">Preferred Date</label>
+                    <input id="date" name="Preferred Date" type="date" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="time">Preferred Time</label>
+                    <input id="time" name="Preferred Time" type="time" />
+                    <span class="help">Optional — we’ll confirm availability.</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Notes -->
+              <div class="field">
+                <label for="notes">Notes / Add-Ons</label>
+                <textarea id="notes" name="Notes" placeholder="Add-ons, special requests, gate codes, access notes, etc."></textarea>
+                <span class="help">
+                  Common add-ons: inside oven, fridge, interior windows, pet cleanup, garage or patio sweep.
+                </span>
+              </div>
+
+              <div class="checkbox">
+                <input id="consent" type="checkbox" required />
+                <label for="consent">
+                  I understand this is a quote request and final pricing will be confirmed before service/on arrival based on condition, buildup, add-ons, and scope.
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit Quote Request</button>
+                <span class="help">We typically respond within a few hours during business hours.</span>
+              </div>
+
+              <div class="notice">
+                <strong>Satisfaction Guaranteed.</strong>
+                If something isn’t right, let us know within 24 hours and we’ll make it right.
+              </div>
+
+              <p class="small muted form-privacy">
+                By submitting, your email app will open to send your request to bookings@temeculacleaners.com.
+                We only use your info to confirm your quote and schedule.
+              </p>
+
+            </form>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar stack sidebar-sticky" id="fast-quote" aria-label="Fast quote sidebar">
+
+          <div class="card soft">
+            <h3>Fast Quote Tips</h3>
+            <ul class="list">
+              <li>Accurate bed/bath count helps pricing</li>
+              <li>Let us know if it’s a first-time clean</li>
+              <li>Mention pets and heavy buildup</li>
+              <li>Add-ons can be bundled to save</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Typical Temecula Pricing</h3>
+            <div class="pills">
+              <span class="pill">Standard 2 Bed / 2 Bath <strong>$110–$140</strong></span>
+              <span class="pill">Deep Clean <strong>$160–$320</strong></span>
+              <span class="pill">Move-Out <strong>$199+</strong></span>
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3>Operating Hours</h3>
+            <p class="muted">
+              Monday – Saturday<br />
+              8:00am – 6:00pm
+            </p>
+            <div class="hr"></div>
+            <p class="small muted">
+              Same-day and next-day availability often available.
+            </p>
+          </div>
+
+          <div class="card soft">
+            <h3>What Happens Next</h3>
+            <ol class="list list-steps">
+              <li>We review your request and confirm details.</li>
+              <li>You receive a quote and available time options.</li>
+              <li>We lock in your clean once you confirm.</li>
+            </ol>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (PRESERVED) -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="stack">
+        <div class="brand">
+          <img src="assets/tt-logo.png" alt="T&amp;T Temecula Cleaning Services logo" />
+          <strong>T &amp; T Temecula Cleaning Services</strong>
+        </div>
+        <small>
+          Twice as Clean. Professional Results.<br />
+          Serving Temecula, Murrieta, Menifee, and nearby areas.
+        </small>
+      </div>
+
+      <div class="stack">
+        <small>
+          <strong>Contact:</strong><br />
+          <a href="tel:+17605760723" class="link">(760) 576-0723</a><br />
+          <a href="mailto:info@temeculacleaners.com" class="link">info@temeculacleaners.com</a>
+        </small>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Minimal, scoped JS for estimator only (no external libs) -->
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+
+      const serviceEl = $("est-service");
+      const bedsEl = $("est-beds");
+      const bathsEl = $("est-baths");
+      const firstEl = $("est-first");
+      const petsEl = $("est-pets");
+
+      const outputEl = $("est-output");
+      const minsWrap = $("est-minimums");
+      const minPill = $("est-min-pill");
+      const resetBtn = $("est-reset");
+
+      function roundTo(value, step) {
+        return Math.round(value / step) * step;
+      }
+
+      function clampToMinimums(serviceKey, low, high, bedsNum, bathsNum, bedsRaw, bathsRaw) {
+        // Minimum rules:
+        // Standard: $99 min
+        // Move: $199 min
+        // Airbnb: base $95 for studio/1 bath; larger homes conservative (not undercut base + sanity checks)
+        let min = 0;
+
+        if (serviceKey === "standard") min = 99;
+        if (serviceKey === "move") min = 199;
+
+        // Airbnb: base for studio/1 bath
+        if (serviceKey === "airbnb") {
+          const isStudio = bedsRaw === "studio";
+          const isOneBath = String(bathsRaw) === "1";
+          if (isStudio && isOneBath) {
+            min = 95;
+          } else {
+            // Keep at least the base for any Airbnb, plus keep typical 2/2 in sane range.
+            min = 95;
+          }
+        }
+
+        // Office is inspection-based; keep a conservative floor but we won't pretend precise.
+        if (serviceKey === "office") {
+          min = 120;
+        }
+
+        low = Math.max(low, min);
+        high = Math.max(high, min);
+
+        return { low, high, min };
+      }
+
+      function getRates(serviceKey) {
+        // Per-room pricing (low/high)
+        // Standard: bed 25–35, bath 25–45, min 99
+        // Deep: bed 35–55, bath 45–70
+        // Move: bed 45–70, bath 60–95, min 199
+        // Airbnb: base 95; larger sizes conservative derived from standard-ish but higher floor
+        // Office: starting range 120–220, inspection-based
+        const rates = {
+          standard: { bedLow: 25, bedHigh: 35, bathLow: 25, bathHigh: 45, min: 99 },
+          deep: { bedLow: 35, bedHigh: 55, bathLow: 45, bathHigh: 70, min: 0 },
+          move: { bedLow: 45, bedHigh: 70, bathLow: 60, bathHigh: 95, min: 199 },
+          airbnb: { bedLow: 25, bedHigh: 35, bathLow: 25, bathHigh: 45, min: 95 }, // adjusted with floors below
+          office: { minLow: 120, minHigh: 220 }
+        };
+        return rates[serviceKey] || null;
+      }
+
+      function parseBeds(val) {
+        if (!val) return null;
+        if (val === "studio") return 0;
+        if (val === "5") return 5; // "5+" treated as 5 for estimator; scope may increase on site
+        const n = Number(val);
+        return Number.isFinite(n) ? n : null;
+      }
+
+      function parseBaths(val) {
+        if (!val) return null;
+        // "3+" treated as 3 for estimator; scope may increase on site
+        if (val === "3") return 3;
+        const n = Number(val);
+        return Number.isFinite(n) ? n : null;
+      }
+
+      function formatRange(low, high) {
+        const lowStr = "$" + low.toFixed(0);
+        const highStr = "$" + high.toFixed(0);
+        return lowStr + "–" + highStr;
+      }
+
+      function estimate() {
+        const service = serviceEl.value;
+        const bedsRaw = bedsEl.value;
+        const bathsRaw = bathsEl.value;
+        const first = firstEl.value;
+        const pets = petsEl.value;
+
+        // Require all selections
+        if (!service || !bedsRaw || !bathsRaw || !first || !pets) {
+          outputEl.textContent = "Select options to estimate.";
+          minsWrap.style.display = "none";
+          return;
+        }
+
+        const bedsNum = parseBeds(bedsRaw);
+        const bathsNum = parseBaths(bathsRaw);
+
+        if (bedsNum === null || bathsNum === null) {
+          outputEl.textContent = "Select options to estimate.";
+          minsWrap.style.display = "none";
+          return;
+        }
+
+        // Office: inspection-based range only
+        if (service === "office") {
+          let low = 120;
+          let high = 220;
+
+          // Modifiers (small, conservative)
+          if (first === "yes") { low += 15; high += 25; }
+          if (pets === "yes") { low += 10; high += 20; }
+
+          low = roundTo(low, 10);
+          high = roundTo(high, 10);
+
+          minsWrap.style.display = "";
+          minPill.textContent = "Office / Commercial: inspection-based final quote";
+
+          outputEl.innerHTML =
+            "<strong>Estimated starting range: " + formatRange(low, high) + "</strong>" +
+            "<br /><span class=\"muted\">Final quote is inspection-based and confirmed before service/on arrival.</span>";
+          return;
+        }
+
+        const r = getRates(service);
+        if (!r) {
+          outputEl.textContent = "Select options to estimate.";
+          minsWrap.style.display = "none";
+          return;
+        }
+
+        // Base room math
+        let low = (bedsNum * r.bedLow) + (bathsNum * r.bathLow);
+        let high = (bedsNum * r.bedHigh) + (bathsNum * r.bathHigh);
+
+        // Airbnb logic:
+        // - Studio/1 bath: start at $95 base (already handled via minimum clamp)
+        // - Larger sizes: keep conservative; do not undercut base and keep 2/2 sanity ($120–$170)
+        if (service === "airbnb") {
+          // Slightly elevate above standard for turnovers without pretending precision
+          low += 10;
+          high += 20;
+
+          // Sanity: typical 2/2 should not undercut $120–$170
+          if (bedsNum === 2 && bathsNum === 2) {
+            low = Math.max(low, 120);
+            high = Math.max(high, 170);
+          }
+        }
+
+        // Modifiers: flat, conservative (avoid over-precision)
+        if (first === "yes") {
+          low += 20;
+          high += 35;
+        }
+        if (pets === "yes") {
+          low += 10;
+          high += 25;
+        }
+
+        // Clamp minimums
+        const clamped = clampToMinimums(service, low, high, bedsNum, bathsNum, bedsRaw, bathsRaw);
+        low = clamped.low;
+        high = clamped.high;
+
+        // Round totals to nearest $10 (preferred)
+        low = roundTo(low, 10);
+        high = roundTo(high, 10);
+
+        // Ensure high is never below low (after rounding)
+        if (high < low) high = low;
+
+        // Minimum pill text
+        minsWrap.style.display = "";
+        if (service === "standard") {
+          minPill.textContent = "Standard minimum: $99";
+        } else if (service === "move") {
+          minPill.textContent = "Move-In / Move-Out minimum: $199";
+        } else if (service === "airbnb") {
+          minPill.textContent = "Airbnb / Turnover base: $95 (studio/1 bath)";
+        } else {
+          minPill.textContent = "Final quote confirmed before service";
+        }
+
+        outputEl.innerHTML =
+          "<strong>Estimated starting range: " + formatRange(low, high) + "</strong>" +
+          "<br /><span class=\"muted\">Final pricing depends on condition, buildup, add-ons, and scope; confirmed before service/on arrival.</span>";
+      }
+
+      function resetEstimator() {
+        serviceEl.value = "";
+        bedsEl.value = "";
+        bathsEl.value = "";
+        firstEl.value = "";
+        petsEl.value = "";
+        outputEl.textContent = "Select options to estimate.";
+        minsWrap.style.display = "none";
+      }
+
+      ["change", "input"].forEach(evt => {
+        serviceEl.addEventListener(evt, estimate);
+        bedsEl.addEventListener(evt, estimate);
+        bathsEl.addEventListener(evt, estimate);
+        firstEl.addEventListener(evt, estimate);
+        petsEl.addEventListener(evt, estimate);
+      });
+
+      resetBtn.addEventListener("click", resetEstimator);
+
+      // Initial state
+      resetEstimator();
+    })();
+  </script>
+
+</body>
+</html>
